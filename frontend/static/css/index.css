@@ -1,0 +1,321 @@
+/* ------------------ GLOBAL ------------------ */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* header, content, footer */
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff,#333;
+  scroll-behavior: smooth; /* Smooth scroll for anchor links */
+}
+
+/* ------------------ HEADER ------------------ */
+.app-header {
+  background: linear-gradient(135deg, #5f5cff, #764ba2);
+  padding: 10px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.app-header .navbar-brand {
+  font-size: 1.3rem;
+}
+
+.app-header .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.app-header .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* ------------------ MAIN CONTENT ------------------ */
+.main-content {
+  flex: 1; /* fill space between header & footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+/* ------------------ CARD ------------------ */
+.card {
+  border-radius: 20px;
+  border: none;
+  max-width: 800px;
+  width: 100%;
+  padding: 30px;
+  background: rgba(255,255,255,0.95);
+  color: #000;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* ------------------ UPLOAD BOX ------------------ */
+.upload-box {
+  border: 2px dashed #6c63ff;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #f8f9ff;
+}
+
+.upload-box:hover {
+  background: #e1e0ff;
+}
+
+.upload-box input {
+  display: none;
+}
+
+/* ------------------ IMAGES CONTAINER ------------------ */
+#imagesContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image-card {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+  flex: 1;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.image-card img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.image-card img:hover {
+  transform: scale(1.02);
+}
+
+/* ------------------ BUTTONS ------------------ */
+#downloadBtn {
+  width: 100%;
+}
+
+button {
+  font-weight: 600;
+}
+
+/* ------------------ LOADER ------------------ */
+.loader {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ------------------ FOOTER ------------------ */
+.app-footer {
+  background: #f8f9fa;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #333;
+}
+
+.app-footer p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.app-footer small {
+  color: #6c757d;
+}
+
+/* ------------------ FEATURES ------------------ */
+.features-list {
+  background: #f9f9f9; /* softer light background */
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3f7afc;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.feature-icon-wrapper {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: #e6f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.feature-icon {
+  font-size: 28px;
+  color: #3f7afc;
+}
+
+.feature-text h4 {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
+
+.feature-text p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+header {
+  background: #f8f9fa;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h5 {
+  color: #0073e6;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contact Boxes */
+.contact-box {
+  background: #f9f9f9;
+  padding: 25px 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-box:hover {
+  background: #0073e6;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.contact-box i {
+  font-size: 30px;
+  margin-bottom: 12px;
+  color: #0073e6;
+  transition: color 0.3s;
+}
+
+.contact-box:hover i {
+  color: #fff;
+}
+
+.contact-box h5 {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.contact-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: inherit;
+}
+/* ------------------ RESPONSIVE BREAKPOINTS ------------------ */
+/* Tablets */
+@media (max-width: 992px) {
+  .card {
+    padding: 20px;
+  }
+
+  .image-card {
+    padding: 12px;
+  }
+
+  .feature-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-icon {
+    margin-bottom: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  #imagesContainer {
+    flex-direction: column;
+  }
+
+  .upload-box {
+    padding: 18px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .image-card img {
+    width: 100%;
+    height: auto;
+  }
+}
